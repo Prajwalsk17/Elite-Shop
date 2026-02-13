@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EliteShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><i class="fas fa-crown"></i> EliteShop</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#products" class="nav-link">Products</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <a href="signup.html" class="nav-link">Sign Up</a>
+                <a href="index.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-content">
+                <div class="auth-form-container">
+                    <div class="auth-header">
+                        <h1>Welcome Back!</h1>
+                        <p>Sign in to your account to continue shopping</p>
+                    </div>
+                    
+                    <form class="auth-form" id="login-form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-container">
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                <i class="fas fa-envelope input-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-container">
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                                <i class="fas fa-lock input-icon"></i>
+                                <button type="button" class="toggle-password" id="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="remember">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="auth-btn">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Sign In
+                        </button>
+                        
+                        <div class="divider">
+                            <span>or continue with</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button type="button" class="social-btn google-btn">
+                                <i class="fab fa-google"></i>
+                                Google
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <i class="fab fa-facebook-f"></i>
+                                Facebook
+                            </button>
+                            <button type="button" class="social-btn apple-btn">
+                                <i class="fab fa-apple"></i>
+                                Apple
+                            </button>
+                        </div>
+                        
+                        <div class="auth-footer">
+                            <p>Don't have an account? <a href="signup.html" class="auth-link">Sign up here</a></p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="auth-image">
+                    <div class="image-content">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Shopping Experience">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h2>Join Our Community</h2>
+                                <p>Over 2 million satisfied customers trust EliteShop for their shopping needs</p>
+                                <div class="features-list">
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Exclusive member discounts</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Priority customer support</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Early access to sales</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Personalized recommendations</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Features -->
+    <section class="security-features">
+        <div class="container">
+            <div class="security-grid">
+                <div class="security-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Login</h3>
+                    <p>256-bit SSL encryption protects your data</p>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Privacy Protected</h3>
+                    <p>Your personal information is never shared</p>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Two-Factor Auth</h3>
+                    <p>Optional 2FA for enhanced security</p>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-history"></i>
+                    <h3>Login History</h3>
+                    <p>Monitor all account access attempts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-crown"></i> EliteShop</h3>
+                    <p>Your trusted destination for premium quality products at competitive prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="home.html">My Account</a></li>
+                        <li><a href="#track">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@eliteshop.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Commerce St, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EliteShop. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Login page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('login-form');
+            const togglePassword = document.getElementById('toggle-password');
+            const passwordInput = document.getElementById('password');
+
+            // Password visibility toggle
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-eye');
+                icon.classList.toggle('fa-eye-slash');
+            });
+
+            // Login form submission
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                
+                // Basic validation
+                if (!validateEmail(email)) {
+                    showNotification('Please enter a valid email address', 'error');
+                    return;
+                }
+                
+                if (password.length < 6) {
+                    showNotification('Password must be at least 6 characters long', 'error');
+                    return;
+                }
+
+                // Simulate login process
+                const submitBtn = this.querySelector('.auth-btn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing In...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    // Simulate successful login
+                    localStorage.setItem('isLoggedIn', 'true');
+                    localStorage.setItem('userEmail', email);
+                    
+                    showNotification('Login successful! Welcome back!', 'success');
+                    
+                    // Redirect to home page or dashboard
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 1500);
+                }, 2000);
+            });
+
+            // Social login buttons
+            document.querySelectorAll('.social-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const provider = this.classList.contains('google-btn') ? 'Google' : 
+                                   this.classList.contains('facebook-btn') ? 'Facebook' : 'Apple';
+                    showNotification(`${provider} login would be implemented here`, 'info');
+                });
+            });
+
+            // Forgot password
+            document.querySelector('.forgot-password').addEventListener('click', function(e) {
+                e.preventDefault();
+                showNotification('Password reset email would be sent', 'info');
+            });
+        });
+
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => notification.classList.add('show'), 100);
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

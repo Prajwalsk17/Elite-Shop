@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - EliteShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">.
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><i class="fas fa-crown"></i> EliteShop</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#products" class="nav-link">Products</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="#orders" class="nav-link">My Orders</a>
+                <a href="#wishlist" class="nav-link">Wishlist</a>
+            </div>
+            <div class="nav-icons">
+                <div class="search-container">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="user-menu">
+                    <a href="home.html" class="nav-icon active">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                            <a href="login.html" class="dropdown-item">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="nav-icon" id="cart-toggle">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="dashboard.html" class="nav-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Profile Section -->
+    <section class="user-profile">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="User Avatar" id="avatar-image">
+                    <div class="avatar-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h1>John Doe</h1>
+                    <p class="member-since">Member since October 2023</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">47</span>
+                            <span class="stat-label">Orders</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">₹1,94,220</span>
+                            <span class="stat-label">Total Spent</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Reviews</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-primary" id="edit-profile">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-cog"></i> Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Navigation Tabs -->
+    <section class="account-tabs">
+        <div class="container">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="orders">
+                    <i class="fas fa-shopping-bag"></i> My Orders
+                </button>
+                <button class="tab-btn" data-tab="wishlist">
+                    <i class="fas fa-heart"></i> Wishlist
+                </button>
+                <button class="tab-btn" data-tab="addresses">
+                    <i class="fas fa-map-marker-alt"></i> Addresses
+                </button>
+                <button class="tab-btn" data-tab="payment">
+                    <i class="fas fa-credit-card"></i> Payment Methods
+                </button>
+                <button class="tab-btn" data-tab="reviews">
+                    <i class="fas fa-star"></i> Reviews
+                </button>
+            </div>
+
+            <!-- Orders Tab -->
+            <div class="tab-content active" id="orders-tab">
+                <div class="section-header">
+                    <h2>Order History</h2>
+                    <div class="order-filters">
+                        <select class="filter-select">
+                            <option value="all">All Orders</option>
+                            <option value="pending">Pending</option>
+                            <option value="processing">Processing</option>
+                            <option value="shipped">Shipped</option>
+                            <option value="delivered">Delivered</option>
+                        </select>
+                        <input type="text" placeholder="Search orders..." class="search-orders">
+                    </div>
+                </div>
+                
+                <div class="orders-grid">
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-number">#ORD-2024-001</div>
+                            <div class="order-date">October 15, 2026</div>
+                            <span class="order-status delivered">Delivered</span>
+                        </div>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Product">
+                                <div class="item-details">
+                                    <h4>Premium Wireless Headphones</h4>
+                                    <p>Quantity: 1</p>
+                                </div>
+                                <div class="item-price">₹16,599</div>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <div class="order-total">Total: ₹16,599</div>
+                            <div class="order-actions">
+                                <button class="btn-outline">Track Order</button>
+                                <button class="btn-outline">Reorder</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <div class="order-header">
+                            <div class="order-number">#ORD-2024-002</div>
+                            <div class="order-date">October 10, 2026</div>
+                            <span class="order-status shipped">Shipped</span>
+                        </div>
+                        <div class="order-items">
+                            <div class="order-item">
+                                <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Product">
+                                <div class="item-details">
+                                    <h4>Smartwatch Pro</h4>
+                                    <p>Quantity: 1</p>
+                                </div>
+                                <div class="item-price">₹24,899</div>
+                            </div>
+                            <div class="order-item">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Product">
+                                <div class="item-details">
+                                    <h4>Running Shoes</h4>
+                                    <p>Quantity: 1</p>
+                                </div>
+                                <div class="item-price">₹10,799</div>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <div class="order-total">Total: ₹35,698</div>
+                            <div class="order-actions">
+                                <button class="btn-outline">Track Order</button>
+                                <button class="btn-outline">Reorder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wishlist Tab -->
+            <div class="tab-content" id="wishlist-tab">
+                <div class="section-header">
+                    <h2>My Wishlist</h2>
+                    <button class="btn-primary">
+                        <i class="fas fa-share"></i> Share Wishlist
+                    </button>
+                </div>
+                
+                <div class="wishlist-grid">
+                    <div class="wishlist-item">
+                        <div class="wishlist-image">
+                            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Leather Jacket">
+                            <button class="remove-wishlist" title="Remove from wishlist">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="wishlist-content">
+                            <h3>Designer Leather Jacket</h3>
+                            <div class="price">₹13,299</div>
+                            <div class="availability in-stock">
+                                <i class="fas fa-check-circle"></i> In Stock
+                            </div>
+                            <button class="btn-primary add-to-cart-wishlist">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-item">
+                        <div class="wishlist-image">
+                            <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Coffee Table">
+                            <button class="remove-wishlist" title="Remove from wishlist">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="wishlist-content">
+                            <h3>Modern Coffee Table</h3>
+                            <div class="price">₹20,749</div>
+                            <div class="availability out-of-stock">
+                                <i class="fas fa-exclamation-circle"></i> Out of Stock
+                            </div>
+                            <button class="btn-secondary" disabled>Notify When Available</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Addresses Tab -->
+            <div class="tab-content" id="addresses-tab">
+                <div class="section-header">
+                    <h2>My Addresses</h2>
+                    <button class="btn-primary" id="add-address">
+                        <i class="fas fa-plus"></i> Add New Address
+                    </button>
+                </div>
+                
+                <div class="addresses-grid">
+                    <div class="address-card default">
+                        <div class="address-header">
+                            <span class="address-type">Home</span>
+                            <span class="default-badge">Default</span>
+                        </div>
+                        <div class="address-content">
+                            <h4>John Doe</h4>
+                            <p>123 Main Street<br>
+                            Apartment 4B<br>
+                            New York, NY 10001<br>
+                            United States</p>
+                            <p class="phone">+1 (555) 123-4567</p>
+                        </div>
+                        <div class="address-actions">
+                            <button class="btn-outline">Edit</button>
+                            <button class="btn-outline">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="address-card">
+                        <div class="address-header">
+                            <span class="address-type">Work</span>
+                        </div>
+                        <div class="address-content">
+                            <h4>John Doe</h4>
+                            <p>456 Business Ave<br>
+                            Suite 12<br>
+                            New York, NY 10002<br>
+                            United States</p>
+                            <p class="phone">+1 (555) 987-6543</p>
+                        </div>
+                        <div class="address-actions">
+                            <button class="btn-outline">Edit</button>
+                            <button class="btn-outline">Set as Default</button>
+                            <button class="btn-outline">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Methods Tab -->
+            <div class="tab-content" id="payment-tab">
+                <div class="section-header">
+                    <h2>Payment Methods</h2>
+                    <button class="btn-primary" id="add-payment">
+                        <i class="fas fa-plus"></i> Add Payment Method
+                    </button>
+                </div>
+                
+                <div class="payment-methods">
+                    <div class="payment-card">
+                        <div class="card-info">
+                            <div class="card-brand">
+                                <i class="fab fa-cc-visa"></i> Visa
+                            </div>
+                            <div class="card-number">**** **** **** 1234</div>
+                            <div class="card-expiry">Expires 12/27</div>
+                            <span class="default-badge">Default</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-outline">Edit</button>
+                            <button class="btn-outline">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="payment-card">
+                        <div class="card-info">
+                            <div class="card-brand">
+                                <i class="fab fa-cc-mastercard"></i> Mastercard
+                            </div>
+                            <div class="card-number">**** **** **** 5678</div>
+                            <div class="card-expiry">Expires 09/26</div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-outline">Set as Default</button>
+                            <button class="btn-outline">Edit</button>
+                            <button class="btn-outline">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Tab -->
+            <div class="tab-content" id="reviews-tab">
+                <div class="section-header">
+                    <h2>My Reviews</h2>
+                    <div class="review-stats">
+                        <span>Average Rating: <strong>4.5 <i class="fas fa-star"></i></strong></span>
+                    </div>
+                </div>
+                
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="review-product">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Product">
+                            <div class="product-info">
+                                <h4>Premium Wireless Headphones</h4>
+                                <div class="review-date">Reviewed on October 20, 2026</div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h5>Excellent sound quality!</h5>
+                            <p>These headphones exceeded my expectations. The sound quality is incredible, the noise cancellation works perfectly, and they're very comfortable for long listening sessions.</p>
+                            <div class="review-actions">
+                                <button class="btn-outline">Edit Review</button>
+                                <button class="btn-outline">Delete Review</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-product">
+                            <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Product">
+                            <div class="product-info">
+                                <h4>Smartwatch Pro</h4>
+                                <div class="review-date">Reviewed on October 15, 2026</div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <h5>Great smartwatch with minor issues</h5>
+                            <p>The smartwatch has amazing features and the battery life is excellent. The health tracking is very accurate. Only complaint is that the strap could be more comfortable.</p>
+                            <div class="review-actions">
+                                <button class="btn-outline">Edit Review</button>
+                                <button class="btn-outline">Delete Review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar (reused from index) -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cart-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-content" id="cart-content">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cart-total">0.00</span></strong>
+            </div>
+            <button class="btn-primary cart-checkout" disabled>Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Home page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const targetTab = this.dataset.tab;
+                    
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab + '-tab').classList.add('active');
+                });
+            });
+
+            // Profile editing functionality
+            document.getElementById('edit-profile')?.addEventListener('click', function() {
+                app.showNotification('Profile editing form would open here', 'info');
+            });
+
+            // Address management
+            document.getElementById('add-address')?.addEventListener('click', function() {
+                app.showNotification('Add address form would open here', 'info');
+            });
+
+            // Payment method management
+            document.getElementById('add-payment')?.addEventListener('click', function() {
+                app.showNotification('Add payment method form would open here', 'info');
+            });
+
+            // Wishlist functionality
+            document.querySelectorAll('.remove-wishlist').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const item = this.closest('.wishlist-item');
+                    item.style.opacity = '0.5';
+                    app.showNotification('Item removed from wishlist', 'success');
+                    setTimeout(() => item.remove(), 500);
+                });
+            });
+
+            document.querySelectorAll('.add-to-cart-wishlist').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    app.showNotification('Item added to cart!', 'success');
+                });
+            });
+
+            // Order filtering
+            document.querySelector('.filter-select')?.addEventListener('change', function() {
+                app.showNotification(`Filtering orders by: ${this.value}`, 'info');
+            });
+
+            // Avatar upload simulation
+            document.querySelector('.avatar-overlay')?.addEventListener('click', function() {
+                app.showNotification('Avatar upload would be handled here', 'info');
+            });
+        });
+    </script>
+
+    <style>
+        /* Home page specific styles */
+        .user-profile {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 60px;
+        }
+
+        .profile-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .profile-avatar {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .profile-avatar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+        }
+
+        .avatar-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .profile-avatar:hover .avatar-overlay {
+            opacity: 1;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-since {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .profile-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .account-tabs {
+            background: white;
+            padding: 2rem 0;
+        }
+
+        .tabs-nav {
+            display: flex;
+            border-bottom: 2px solid #e9ecef;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 1rem 2rem;
+            border: none;
+            background: none;
+            color: #6c757d;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover,
+        .tab-btn.active {
+            color: #2c5aa0;
+            border-bottom-color: #2c5aa0;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .order-filters,
+        .review-stats {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .filter-select,
+        .search-orders {
+            padding: 0.5rem 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+        }
+
+        .orders-grid,
+        .wishlist-grid,
+        .addresses-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .order-card,
+        .address-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .order-number {
+            font-weight: 600;
+            color: #2c5aa0;
+        }
+
+        .order-date {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .order-items {
+            border-top: 1px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;
+            padding: 1rem 0;
+            margin: 1rem 0;
+        }
+
+        .order-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .order-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .order-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-details h4 {
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+
+        .item-details p {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .item-price {
+            font-weight: 600;
+            color: #2c5aa0;
+        }
+
+        .order-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .order-total {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .order-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-outline {
+            padding: 0.5rem 1rem;
+            border: 1px solid #2c5aa0;
+            background: transparent;
+            color: #2c5aa0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-outline:hover {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        .wishlist-grid {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        .wishlist-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .wishlist-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .wishlist-image {
+            position: relative;
+        }
+
+        .wishlist-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .remove-wishlist {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #e74c3c;
+            transition: all 0.3s ease;
+        }
+
+        .remove-wishlist:hover {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .wishlist-content {
+            padding: 1.5rem;
+        }
+
+        .wishlist-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c5aa0;
+            margin-bottom: 0.8rem;
+        }
+
+        .availability {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .availability.in-stock {
+            color: #27ae60;
+        }
+
+        .availability.out-of-stock {
+            color: #e74c3c;
+        }
+
+        .addresses-grid {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .address-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .address-type {
+            background: #e9ecef;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .default-badge {
+            background: #27ae60;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        .address-content h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .address-content p {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .phone {
+            font-weight: 500;
+            color: #2c5aa0;
+        }
+
+        .address-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .payment-methods {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .payment-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .card-brand {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-brand i {
+            font-size: 1.5rem;
+        }
+
+        .card-number {
+            font-family: monospace;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .card-expiry {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .reviews-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .review-item {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .review-product {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-product img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .review-rating {
+            color: #f39c12;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-content h5 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .review-content p {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .review-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .review-date {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .profile-stats {
+                justify-content: center;
+            }
+
+            .tabs-nav {
+                justify-content: flex-start;
+            }
+
+            .tab-btn {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</body>
+</html>

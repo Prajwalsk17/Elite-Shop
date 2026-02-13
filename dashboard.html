@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EliteShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><i class="fas fa-crown"></i> EliteShop</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#products" class="nav-link">Products</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="#orders" class="nav-link">Orders</a>
+                <a href="#analytics" class="nav-link">Analytics</a>
+            </div>
+            <div class="nav-icons">
+                <div class="search-container">
+                    <input type="text" placeholder="Search orders..." class="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <a href="#" class="nav-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="cart-count">3</span>
+                </a>
+                <a href="#" class="nav-icon">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="dashboard.html" class="nav-icon active">
+                    <i class="fas fa-tachometer-alt"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>Welcome back, Admin!</h1>
+                <p>Here's what's happening with your store today</p>
+                <div class="header-actions">
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i> Add Product
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-download"></i> Export Data
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Statistics -->
+            <div class="dashboard-stats">
+                <div class="stat-card">

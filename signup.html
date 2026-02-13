@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - EliteShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><i class="fas fa-crown"></i> EliteShop</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#products" class="nav-link">Products</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="index.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-content">
+                <div class="auth-form-container">
+                    <div class="auth-header">
+                        <h1>Create Account</h1>
+                        <p>Join our community of 2+ million happy customers</p>
+                    </div>
+                    
+                    <form class="auth-form" id="signup-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <div class="input-container">
+                                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                                    <i class="fas fa-user input-icon"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <div class="input-container">
+                                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                                    <i class="fas fa-user input-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-container">
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                <i class="fas fa-envelope input-icon"></i>
+                                <div class="validation-feedback" id="email-feedback"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <div class="input-container">
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                <i class="fas fa-phone input-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-container">
+                                <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                                <i class="fas fa-lock input-icon"></i>
+                                <button type="button" class="toggle-password" id="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-strength" id="password-strength">
+                                <div class="strength-meter">
+                                    <div class="strength-fill"></div>
+                                </div>
+                                <div class="strength-text">Password strength</div>
+                            </div>
+                            <div class="password-requirements">
+                                <div class="requirement" data-requirement="length">
+                                    <i class="fas fa-times"></i>
+                                    <span>At least 8 characters</span>
+                                </div>
+                                <div class="requirement" data-requirement="uppercase">
+                                    <i class="fas fa-times"></i>
+                                    <span>One uppercase letter</span>
+                                </div>
+                                <div class="requirement" data-requirement="lowercase">
+                                    <i class="fas fa-times"></i>
+                                    <span>One lowercase letter</span>
+                                </div>
+                                <div class="requirement" data-requirement="number">
+                                    <i class="fas fa-times"></i>
+                                    <span>One number</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <div class="input-container">
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                                <i class="fas fa-lock input-icon"></i>
+                                <button type="button" class="toggle-password" id="toggle-confirm-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="validation-feedback" id="confirm-password-feedback"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="birthdate">Date of Birth</label>
+                            <div class="input-container">
+                                <input type="date" id="birthdate" name="birthdate" required>
+                                <i class="fas fa-calendar input-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <div class="input-container">
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select your gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                </select>
+                                <i class="fas fa-chevron-down input-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to newsletter for exclusive deals
+                            </label>
+                            
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" class="auth-link">Terms of Service</a> and <a href="#" class="auth-link">Privacy Policy</a>
+                            </label>
+                            
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="marketing" name="marketing">
+                                <span class="checkmark"></span>
+                                I agree to receive marketing communications
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="auth-btn" id="signup-btn" disabled>
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </button>
+                        
+                        <div class="divider">
+                            <span>or sign up with</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button type="button" class="social-btn google-btn">
+                                <i class="fab fa-google"></i>
+                                Google
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <i class="fab fa-facebook-f"></i>
+                                Facebook
+                            </button>
+                            <button type="button" class="social-btn apple-btn">
+                                <i class="fab fa-apple"></i>
+                                Apple
+                            </button>
+                        </div>
+                        
+                        <div class="auth-footer">
+                            <p>Already have an account? <a href="login.html" class="auth-link">Sign in here</a></p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="auth-image">
+                    <div class="image-content">
+                        <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Join Community">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h2>Join Elite Community</h2>
+                                <p>Experience premium shopping with exclusive member benefits</p>
+                                <div class="benefits-grid">
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon">
+                                            <i class="fas fa-percentage"></i>
+                                        </div>
+                                        <div class="benefit-text">
+                                            <h4>Exclusive Discounts</h4>
+                                            <p>Up to 30% off for members</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon">
+                                            <i class="fas fa-shipping-fast"></i>
+                                        </div>
+                                        <div class="benefit-text">
+                                            <h4>Free Shipping</h4>
+                                            <p>On all orders over ₹4,150</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="benefit-text">
+                                            <h4>VIP Support</h4>
+                                            <p>Priority customer service</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <div class="benefit-icon">
+                                            <i class="fas fa-gift"></i>
+                                        </div>
+                                        <div class="benefit-text">
+                                            <h4>Birthday Rewards</h4>
+                                            <p>Special gifts on your birthday</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-indicators">
+        <div class="container">
+            <h2>Trusted by Millions</h2>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-number">2M+</div>
+                    <div class="trust-label">Happy Customers</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">99.9%</div>
+                    <div class="trust-label">Uptime Guarantee</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">50K+</div>
+                    <div class="trust-label">Products Available</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">4.9★</div>
+                    <div class="trust-label">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-crown"></i> EliteShop</h3>
+                    <p>Your trusted destination for premium quality products at competitive prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="home.html">My Account</a></li>
+                        <li><a href="#track">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@eliteshop.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Commerce St, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EliteShop. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Signup page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const signupForm = document.getElementById('signup-form');
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            const termsCheckbox = document.getElementById('terms');
+            const signupBtn = document.getElementById('signup-btn');
+
+            // Password visibility toggles
+            document.getElementById('toggle-password').addEventListener('click', function() {
+                togglePasswordVisibility(passwordInput, this);
+            });
+
+            document.getElementById('toggle-confirm-password').addEventListener('click', function() {
+                togglePasswordVisibility(confirmPasswordInput, this);
+            });
+
+            // Real-time password validation
+            passwordInput.addEventListener('input', function() {
+                validatePassword(this.value);
+                validatePasswordMatch();
+            });
+
+            confirmPasswordInput.addEventListener('input', validatePasswordMatch);
+
+            // Email validation
+            document.getElementById('email').addEventListener('blur', function() {
+                validateEmailField(this.value);
+            });
+
+            // Terms checkbox
+            termsCheckbox.addEventListener('change', function() {
+                signupBtn.disabled = !this.checked;
+                signupBtn.style.opacity = this.checked ? '1' : '0.5';
+            });
+
+            // Form submission
+            signupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!validateForm()) {
+                    return;
+                }
+
+                // Simulate signup process
+                const originalText = signupBtn.innerHTML;
+                signupBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Account...';
+                signupBtn.disabled = true;
+
+                setTimeout(() => {
+                    const userData = {
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        birthdate: document.getElementById('birthdate').value,
+                        gender: document.getElementById('gender').value,
+                        newsletter: document.getElementById('newsletter').checked,
+                        marketing: document.getElementById('marketing').checked
+                    };
+                    
+                    localStorage.setItem('userData', JSON.stringify(userData));
+                    localStorage.setItem('isLoggedIn', 'true');
+                    localStorage.setItem('userEmail', userData.email);
+                    
+                    showNotification('🎉 Account created successfully! Welcome to EliteShop!', 'success');
+                    
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 2000);
+                }, 2500);
+            });
+
+            // Social signup buttons
+            document.querySelectorAll('.social-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const provider = this.classList.contains('google-btn') ? 'Google' : 
+                                   this.classList.contains('facebook-btn') ? 'Facebook' : 'Apple';
+                    showNotification(`${provider} signup would be implemented here`, 'info');
+                });
+            });
+        });
+
+        function togglePasswordVisibility(input, button) {
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
+            
+            const icon = button.querySelector('i');
+            icon.classList.toggle('fa-eye');
+            icon.classList.toggle('fa-eye-slash');
+        }
+
+        function validatePassword(password) {
+            const requirements = {
+                length: password.length >= 8,
+                uppercase: /[A-Z]/.test(password),
+                lowercase: /[a-z]/.test(password),
+                number: /\d/.test(password)
+            };
+
+            // Update requirement indicators
+            Object.keys(requirements).forEach(req => {
+                const element = document.querySelector(`[data-requirement="${req}"]`);
+                const icon = element.querySelector('i');
+                
+                if (requirements[req]) {
+                    element.classList.add('met');
+                    icon.className = 'fas fa-check';
+                } else {
+                    element.classList.remove('met');
+                    icon.className = 'fas fa-times';
+                }
+            });
+
+            // Update strength meter
+            const strength = Object.values(requirements).filter(Boolean).length;
+            const strengthFill = document.querySelector('.strength-fill');
+            const strengthText = document.querySelector('.strength-text');
+            
+            strengthFill.style.width = `${(strength / 4) * 100}%`;
+            
+            if (strength === 0) {
+                strengthFill.className = 'strength-fill';
+                strengthText.textContent = 'Password strength';
+            } else if (strength < 2) {
+                strengthFill.className = 'strength-fill weak';
+                strengthText.textContent = 'Weak password';
+            } else if (strength < 4) {
+                strengthFill.className = 'strength-fill medium';
+                strengthText.textContent = 'Medium password';
+            } else {
+                strengthFill.className = 'strength-fill strong';
+                strengthText.textContent = 'Strong password';
+            }
+
+            return strength === 4;
+        }
+
+        function validatePasswordMatch() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const feedback = document.getElementById('confirm-password-feedback');
+            
+            if (confirmPassword.length > 0) {
+                if (password === confirmPassword) {
+                    feedback.textContent = 'Passwords match';
+                    feedback.className = 'validation-feedback success';
+                    return true;
+                } else {
+                    feedback.textContent = 'Passwords do not match';
+                    feedback.className = 'validation-feedback error';
+                    return false;
+                }
+            } else {
+                feedback.textContent = '';
+                feedback.className = 'validation-feedback';
+                return false;
+            }
+        }
+
+        function validateEmailField(email) {
+            const feedback = document.getElementById('email-feedback');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (email.length > 0) {
+                if (emailRegex.test(email)) {
+                    feedback.textContent = 'Valid email address';
+                    feedback.className = 'validation-feedback success';
+                    return true;
+                } else {
+                    feedback.textContent = 'Please enter a valid email address';
+                    feedback.className = 'validation-feedback error';
+                    return false;
+                }
+            } else {
+                feedback.textContent = '';
+                feedback.className = 'validation-feedback';
+                return false;
+            }
+        }
+
+        function validateForm() {
+            const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'password', 'confirmPassword', 'birthdate', 'gender'];
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field);
+                if (!input.value.trim()) {
+                    showNotification(`Please fill in ${field.replace(/([A-Z])/g, ' $1').toLowerCase()}`, 'error');
+                    isValid = false;
+                    return;
+                }
+            });
+
+            if (!validateEmailField(document.getElementById('email').value)) {
+                isValid = false;
+            }
+
+            if (!validatePassword(document.getElementById('password').value)) {
+                showNotification('Please create a stronger password', 'error');
+                isValid = false;
+            }
+
+            if (!validatePasswordMatch()) {
+                showNotification('Passwords do not match', 'error');
+                isValid = false;
+            }
+
+            if (!document.getElementById('terms').checked) {
+                showNotification('Please accept the terms and conditions', 'error');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => notification.classList.add('show'), 100);
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
